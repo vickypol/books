@@ -23,4 +23,4 @@ jobs:
     - name: Log in to Docker Hub
       run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }}
     - name: Push the Docker image to Docker Hub
-      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/books:${{ secrets.DOCKERHUB_USERNAME }}/books:${GIT_COMMIT_ID}
+      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/books:${GIT_COMMIT_ID}
