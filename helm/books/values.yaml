@@ -39,7 +39,6 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
   port: 5000
   type: LoadBalancer
 
