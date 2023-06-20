@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 
 app = Flask(__name__)
-@app.route('/books', methods=['GET'])
+@app.route('/', methods=['GET'])
 def scrape_books():
     base_url = 'https://books.toscrape.com'
     url = base_url + '/catalogue/category/books_1/index.html'
