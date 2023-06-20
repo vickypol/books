@@ -30,4 +30,8 @@ resource "helm_release" "books" {
   values = [
     "${file("${path.module}/../../helm/books/values.yaml")}"
   ]
+  set {
+    name  = "image.tag"
+    value = var.tag
+  }
 }

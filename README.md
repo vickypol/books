@@ -22,10 +22,10 @@
 
 > cd terraform/books-helm
 
-> terraform init/plan/apply
+> terraform init/plan/apply -var="tag=a713b22"
 
 > kubectl get svc -n books
 
 <li>Get external IP of the service. 
 
-<li>Open it in browser on port 5000, endpoint /books
+<li>Open it in browser http://ip:5000/1 for page 1 etc.
