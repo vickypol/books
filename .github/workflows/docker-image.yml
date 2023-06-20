@@ -19,9 +19,9 @@ jobs:
         DOCKER_IMAGE_TAG: ${{ github.sha }}
       run: |
         GIT_COMMIT_ID=$(git rev-parse --short=7 ${DOCKER_IMAGE_TAG})
-        docker build ./app --file Dockerfile --tag ${{ secrets.DOCKERHUB_USERNAME }}/books:latest --tag ${{ secrets.DOCKERHUB_USERNAME }}/books:${GIT_COMMIT_ID}
+        docker build ./app --file Dockerfile --tag ${{ secrets.DOCKERHUB_USERNAME }}/books:latest --tag ${{ secrets.DOCKERHUB_USERNAME }}/books:1
     - name: Log in to Docker Hub
       run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }}
     - name: Push the Docker image to Docker Hub
-      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/books:${GIT_COMMIT_ID}
+      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/books:1
 
