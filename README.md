@@ -2,7 +2,7 @@
 # books scraping app
 
 
-## Test project for Workies
+## exam project
 ---
 ## Deploy VPC, EKS, K8S
 
